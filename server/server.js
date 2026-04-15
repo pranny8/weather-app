@@ -4,13 +4,13 @@ import fetch from "node-fetch";
 import dotenv from "dotenv";
 
 dotenv.config();
-console.log("ENV KEY =", Process.env.API_KEY);
+console.log("ENV KEY =", process.env.API_KEY);
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-const apiKey = process.env.API_KEY;
+const PORT = process.env.PORT || 5050;
 
 //test route 
 app.get("/", (req, res) => {
