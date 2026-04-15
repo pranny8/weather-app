@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 5050;
+const PORT = process.env.PORT || 5050;
 
 //test route 
 app.get("/", (req, res) => {
@@ -30,7 +30,7 @@ app.get("/weather", async (req, res) => {
     );
     const data = await response.json();
     res.json(data);
-    
+
   } catch (err) {
     res.json({ error: "Something went wrong" });
   }

@@ -11,7 +11,7 @@ function App() {
     try{
     const response = await fetch
     (
-      `http://localhost:5050/weather?city=${city}`
+      `https://weather-backend-hq5i.onrender.com/weather?city=${city}`
     );
 
     const data = await response.json();
