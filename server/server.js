@@ -4,7 +4,7 @@ import fetch from "node-fetch";
 import dotenv from "dotenv";
 
 dotenv.config();
-
+console.log("ENV KEY =", Process.env.API_KEY);
 
 const app = express();
 app.use(cors());
